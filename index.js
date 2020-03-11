@@ -68,7 +68,7 @@ const handlePaymeCommand = (req, res) => {
         qrPayload,
         {
           color: {
-            dark: "#00F",
+            dark: "#000",
             light: "#FFF"
           }
         },
