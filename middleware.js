@@ -1,3 +1,5 @@
+const _ = require("lodash")
+
 exports.interceptTestMessage = (req, res, next) => {
   const events = req.body.events
   const isTestMessage = events.some(
@@ -28,8 +30,12 @@ exports.filterGroupMessage = (req, res, next) => {
   return next()
 }
 
-exports.filterPrefix = prefix => (req, res, next) => {
+exports.filterPrefixes = prefixes => (req, res, next) => {
   const messageText = req.event.message.text
-  if (messageText.startsWith(prefix)) return next()
-  return ack(res)
+  const foundPrefix = _.find(prefixes, prefix => messageText.startsWith(prefix))
+
+  if (!foundPrefix) return ack(res)
+
+  req.commandPrefix = foundPrefix
+  return next()
 }
