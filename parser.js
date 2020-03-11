@@ -3,7 +3,7 @@ const utils = require("./utils")
 
 // [name] 1000 2000 500/2
 const NAME_REGEX = /^[^0-9-+]+/
-const PRICE_REGEX = /^[0-9-+*\/%]+$/
+const PRICE_REGEX = /^[0-9-+*\/.%]+$/
 
 const isName = token => NAME_REGEX.test(token)
 const isPrice = token => PRICE_REGEX.test(token)

@@ -55,6 +55,11 @@ test("parse 7", () => {
   ])
 })
 
+test("parse 7", () => {
+  const text = "a 100.123"
+  expect(parser.parse(text)).toEqual([{ names: ["a"], prices: ["100.123"] }])
+})
+
 test("scenario 1", () => {
   const text = "boat 100 1000/3\nlouis 300 1000/3\nprun 200 1000/3\n+10% +7%"
   expect(parser.parse(text)).toEqual([
