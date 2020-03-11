@@ -1,0 +1,19 @@
+{
+  "name": "salmonsushibot",
+  "version": "0.0.0",
+  "description": "salmonsushibot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.4",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mathjs": "^6.6.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
