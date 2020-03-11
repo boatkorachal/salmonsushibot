@@ -10,9 +10,14 @@ exports.process = commands => {
   return result
 }
 
+const calc = price => {
+  const result = mathjs.eval(price)
+  return _.isFinite(result) ? result : 0
+}
+
 const handleSplitByNames = (acc, { names, prices }) => {
   const uniqueNames = _.uniq(names)
-  const sumPrice = prices.reduce((acc, price) => acc + mathjs.eval(price), 0)
+  const sumPrice = prices.reduce((acc, price) => acc + calc(price), 0)
   const pricePerName = sumPrice / uniqueNames.length
 
   return uniqueNames.reduce((acc, name) => {

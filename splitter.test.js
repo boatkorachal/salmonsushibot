@@ -66,6 +66,14 @@ test("split 5", () => {
   })
 })
 
+test("split 6", () => {
+  const commands = [{ names: ["a"], prices: ["1000/0", "100"] }]
+
+  expect(splitter.process(commands)).toEqual({
+    a: 100
+  })
+})
+
 test("scenario 1", () => {
   const commands = [
     { names: ["boat"], prices: ["100", "1000/4"] },
