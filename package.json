@@ -11,7 +11,7 @@
     "@line/bot-sdk": "^6.8.4",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "mathjs": "^6.6.1",
+    "mathjs": "^7.5.1",
     "promptpay-qr": "^0.4.4",
     "qrcode": "^1.4.4"
   },
