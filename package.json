@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@line/bot-sdk": "^6.8.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.15",
     "mathjs": "^6.6.1",
     "promptpay-qr": "^0.4.4",
